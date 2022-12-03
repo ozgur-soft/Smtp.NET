@@ -29,13 +29,13 @@ namespace Smtp {
         }
         public void Mail(MailAddress from, MailAddress to, string subject, string message) {
             try {
-                var smtp = new SmtpClient {
+                using var smtp = new SmtpClient {
                     UseDefaultCredentials = false,
                     Credentials = new NetworkCredential(Username, Password),
                     Host = Host,
                     Port = Port
                 };
-                var mail = new MailMessage(from, to) {
+                using var mail = new MailMessage(from, to) {
                     IsBodyHtml = true,
                     Subject = subject,
                     Body = message
