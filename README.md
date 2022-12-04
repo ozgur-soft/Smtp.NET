@@ -1,5 +1,3 @@
-[![license](https://img.shields.io/:license-mit-blue.svg)](https://github.com/ozgur-soft/Smtp.NET/blob/main/LICENSE.md)
-
 # Smtp.NET
 Simple library for sending utf-8 e-mails via smtp with .NET
 
